@@ -293,28 +293,28 @@ requestAnimationFrame(raf);
 
 const sponsors = [
     {
-        name: 'TechCorp',
-        subtitle: 'Innovation in Technology',
-        icon: 'https://via.placeholder.com/200/667eea/ffffff?text=TC',
+        name: 'PIRELLI',
+        subtitle: 'Power is nothing without control.',
+        icon: '../../assets/sponsors/pirelli.png',
         gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-        bio: 'TechCorp has been at the forefront of technological innovation for over a decade. We specialize in cutting-edge solutions that transform businesses and drive digital transformation.',
-        website: 'https://techcorp.example.com'
+        bio: '-',
+        website: 'https://pirelli.com'
     },
     {
-        name: 'DesignHub',
-        subtitle: 'Creative Solutions',
-        icon: 'https://via.placeholder.com/200/f093fb/ffffff?text=DH',
-        gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-        bio: 'DesignHub is a creative powerhouse bringing stunning visual experiences to life. From branding to user interface design, we craft beautiful, intuitive designs that captivate audiences.',
-        website: 'https://designhub.example.com'
+        name: 'PIRELLI',
+        subtitle: 'Power is nothing without control.',
+        icon: '../../assets/sponsors/pirelli.png',
+        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        bio: '-',
+        website: 'https://pirelli.com'
     },
     {
-        name: 'StartupLab',
-        subtitle: 'Building the Future',
-        icon: 'https://via.placeholder.com/200/4facfe/ffffff?text=SL',
-        gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-        bio: 'StartupLab empowers entrepreneurs and innovators to bring their ideas to life. We provide mentorship, resources, and funding to help startups scale and succeed.',
-        website: 'https://startuplab.example.com'
+        name: 'PIRELLI',
+        subtitle: 'Power is nothing without control.',
+        icon: '../../assets/sponsors/pirelli.png',
+        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        bio: '-',
+        website: 'https://pirelli.com'
     }
 ];
 
@@ -426,7 +426,7 @@ function swapTabs(direction) {
 function showModal(sponsorIndex) {
     const sponsor = sponsors[sponsorIndex];
     modalLogo.style.background = sponsor.gradient;
-    modalLogo.innerHTML = `<img src="${sponsor.icon}" alt="${sponsor.name}">`;
+    modalLogo.innerHTML = `<img src="${sponsor.icon}" alt="${sponsor.name}" style="max-width: 300px; max-height: 300px">`;
     modalTitle.textContent = sponsor.name;
     modalSubtitle.textContent = sponsor.subtitle;
     modalBio.textContent = sponsor.bio;

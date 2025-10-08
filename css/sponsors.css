@@ -1662,19 +1662,12 @@ html.lenis {
 }
 
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0);
+
+    justify-content: left;
     z-index: 1000;
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
@@ -1688,7 +1681,7 @@ html.lenis {
     display: flex;
     gap: 60px;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 90%;
     padding: 80px;
     transform: scale(0.95);
@@ -1699,14 +1692,11 @@ html.lenis {
     transform: scale(1);
 }
 
-.modal-left {
-    flex-shrink: 0;
-}
-
 .modal-logo {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    max-height: 200px;
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
