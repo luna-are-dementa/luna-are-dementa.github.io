@@ -1044,6 +1044,7 @@ html.lenis {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+
     .burger-menu {
         display: flex;
     }
@@ -1063,24 +1064,8 @@ html.lenis {
     }
 
     /* Use ::before for the blur background */
-    .nav-menu::before {
-        content: '';
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(0, 0, 0, 0.75);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(10px);
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
 
-    .nav-menu.active::before {
-        opacity: 1;
-    }
+
 
     .nav-menu.active {
         left: 0;
@@ -1231,6 +1216,13 @@ html.lenis {
     }
 }
 @media (max-width: 768px) {
+    #gallery .card {
+        pointer-events: none;
+        position: relative;  /* Add this line */
+        z-index: 100;
+        flex: 0 0 15rem;
+        height: 24rem;
+    }
     .carousel-title {
         font-size: 2rem;
         margin-bottom: 30px;
