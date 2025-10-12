@@ -114,6 +114,41 @@ nav ul li a.active {
     }
 }
 
+/* Burger menu styles */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10001;
+    position: relative;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 3px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.burger-menu.active .burger-line:nth-child(1) {
+    top: 23px;
+    transform: rotate(-45deg) translate(-50%);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    top: 23px;
+    transform: rotate(45deg) translate(-50%);
+}
+
 @media (max-width: 768px) {
     .burger-menu {
         display: flex;
