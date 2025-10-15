@@ -1096,19 +1096,29 @@ function filterCards() {
         noneText.classList.add('show');
     }
 }
+// Add click handlers for cards with PDFs at the END of the file
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click handlers for cards with PDFs
+    const cards = document.querySelectorAll('.card.is-visible[data-pdf]');
 
-// Optional: Add fade-in animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
+    cards.forEach(card => {
+        const h3 = card.querySelector('h3');
+        if (h3) {
+            // Add pointer cursor to indicate it's clickable
+            h3.style.cursor = 'pointer';
+
+            // Add click event to the h3 element
+            h3.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const pdfFile = card.getAttribute('data-pdf');
+                if (pdfFile) {
+                    // Open PDF in new tab
+                    const pdfPath = '/assets/resources/docs/' + pdfFile;
+                    console.log('Opening PDF:', pdfPath); // For debugging
+                    window.open(pdfPath, '_blank');
+                }
+            });
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);
+    });
+});

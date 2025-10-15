@@ -163,7 +163,7 @@ body::before {
 }
 
 .content-section {
-    padding: 2rem 0;
+    padding: 0.2rem 0;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -899,7 +899,6 @@ html.lenis {
     width: 100px;
     height: 100%;
     z-index: 2;
-    pointer-events: none;
 }
 
 .carousel-wrapper::before {
@@ -937,8 +936,8 @@ html.lenis {
     pointer-events: none;
     position: relative;  /* Add this line */
     z-index: 100;
-  flex: 0 0 22rem;
-  height: 31rem;
+  flex: 0 0 20rem;
+  height: 29rem;
   border-radius: 26px;
   overflow: hidden;
   opacity: 0;            /* hidden until in view */
@@ -948,7 +947,7 @@ html.lenis {
 .card h3 {
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     text-align: center;
     width: 100%;
@@ -961,10 +960,22 @@ html.lenis {
     z-index: 200000;
     pointer-events: none;
 }
+
+.card.is-visible[data-pdf] h3 {
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.card.is-visible[data-pdf] h3:hover {
+    color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+
 .card.is-visible h3 {
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 80%;
+    top: 90%;
     left: 50%;
     text-align: center;
     width: 100%;
@@ -981,6 +992,23 @@ html.lenis {
 
   opacity: 1;
   transform: none;
+}
+
+.gallery a.card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery a.card * {
+    pointer-events: none;
+}
+
+.gallery a.card:hover {
+    transform: translateY(-10px);
 }
 
 /* Make images fit without causing container growth */
