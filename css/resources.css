@@ -947,7 +947,7 @@ html.lenis {
 .card h3 {
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 90%;
+    top: 85%;
     left: 50%;
     text-align: center;
     width: 100%;
